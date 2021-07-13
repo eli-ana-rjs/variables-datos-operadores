@@ -1,6 +1,7 @@
 const btnSaludo = document.getElementById('btn-saludo');
 const btnHeladeria =  document.getElementById('btn-heladeria');
-const btnDatosPersonales = document.getElementById('btn-datos-personales')
+const btnDatosPersonales = document.getElementById('btn-datos-personales');
+const btnListaDeReproduccion = document.getElementById('btn-lista-de-reproduccion');
 
 const saludar = (nombre, apellido) => {
     const saludo = `"Hola ${nombre} ${apellido}, bienvenida a Ada"`;
@@ -41,4 +42,21 @@ btnDatosPersonales.addEventListener('click', () => {
     return alert(mensaje);
 
 });
+
+btnListaDeReproduccion.addEventListener('click', () => {
+
+    const nombrePlaylist = prompt('Ingrese el nombre de la playlist');
+    const titulo1 = prompt('Ingrese el titulo de la primer canción: ');
+    const titulo2 = prompt('Ingrese el titulo de la segunda canción: ');
+    const titulo3 = prompt('Ingrese el titulo de la tercer canción: ');
+
+    const msj = `Se ha creado la playlist '${nombrePlaylist}' con las canciones:
+    ${titulo1}
+    ${titulo2}
+    ${titulo3}
+    `;
+
+    return alert(msj);
+
+})
 

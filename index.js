@@ -2,6 +2,7 @@ const btnSaludo = document.getElementById('btn-saludo');
 const btnHeladeria =  document.getElementById('btn-heladeria');
 const btnDatosPersonales = document.getElementById('btn-datos-personales');
 const btnListaDeReproduccion = document.getElementById('btn-lista-de-reproduccion');
+const btnDireccionCompleta = document.getElementById('btn-direccion-completa');
 
 const saludar = (nombre, apellido) => {
     const saludo = `"Hola ${nombre} ${apellido}, bienvenida a Ada"`;
@@ -58,5 +59,19 @@ btnListaDeReproduccion.addEventListener('click', () => {
 
     return alert(msj);
 
-})
+});
+
+btnDireccionCompleta.addEventListener('click',()=>{
+
+    const calle = prompt('Ingrese la calle de donde vive: ');
+    const numero = prompt('Ingrese el número: ');
+    const departamento = prompt('Ingrese departamento: ');
+    const codigoPostal = prompt('Ingrese el código postal: ');
+    const ciudad = prompt('Ingrese su ciudad: ');
+    const pais = prompt('Ingrese país: ');
+
+    const msj = `La dirección que ha ingresado es: ${calle} ${numero} ${departamento}, ${codigoPostal}, ${ciudad}, ${pais}`;
+
+    return alert(msj);
+});
 
